@@ -1,0 +1,22 @@
+@import '../../styles/fonts.scss';
+
+.mainContainer {
+  background: hsl(185, 41%, 84%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $primary;
+  padding: 4rem 8rem;
+
+  .containerHeading {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.7rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.tipContainer {
+  background: hsl(0, 0%, 100%);
+  //padding: 8rem;
+}
