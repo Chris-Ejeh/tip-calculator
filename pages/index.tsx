@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { TipCard } from '../components/TipCard/TipCard';
+import MainCard from '../components/MainCard/MainCard';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/images/favicon.png" />
       </Head>
 
-      <TipCard />
+      <MainCard heading="SPLITTER" reset="reset" />
     </div>
   );
 }

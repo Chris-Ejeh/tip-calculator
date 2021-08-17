@@ -1,0 +1,8 @@
+@import '../../styles/fonts.scss';
+@import '../../styles/color.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+}
