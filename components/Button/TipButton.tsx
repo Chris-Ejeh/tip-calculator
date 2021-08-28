@@ -1,20 +1,19 @@
-import { FC } from 'react';
-import { values } from 'underscore';
+import { useState } from 'react';
+import { FC, MouseEventHandler } from 'react';
 import styles from './TipButton.module.scss';
 
 interface TipButtonProps {
-  value: string[];
+  value: string;
+  onClick: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
-const TipButton: FC<TipButtonProps> = ({ value }) => {
+const TipButton: FC<TipButtonProps> = ({ value, onClick }) => {
   return (
-    <div className={styles.buttonContainer}>
-      {value.map((num) => (
-        <button onClick={() => console.log(num)} className={styles.button}>
-          {num}
-        </button>
-      ))}
-    </div>
+    <>
+      <button type="submit" onClick={onClick} className={styles.button}>
+        {parseFloat(value)}%
+      </button>
+    </>
   );
 };
 

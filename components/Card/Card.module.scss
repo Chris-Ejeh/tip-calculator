@@ -5,4 +5,58 @@
   display: flex;
   flex-direction: row;
   padding: 2rem;
+  position: relative;
+  border-style: solid;
+  border-radius: 0.5rem;
+}
+
+.inputCard {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3rem;
+}
+
+.form {
+  font-size: 1rem;
+  color: gray;
+  font-family: $primary;
+  padding: 0 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.inputField {
+  position: relative;
+  padding: 0.2rem 1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: $primary;
+  background-color: $LightGrayishCyan;
+  border-radius: 0.5rem;
+  border-style: none;
+}
+
+.percentageButton {
+  margin: 3rem 0;
+}
+
+.buttonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.button {
+  margin: 0.5rem;
+  background-color: $VeryDarkCyan;
+  height: 50px;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-family: $primary;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }

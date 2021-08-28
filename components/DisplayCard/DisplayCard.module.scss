@@ -18,6 +18,10 @@
   align-items: center;
 }
 
+.amount {
+  margin-bottom: -2rem;
+}
+
 .title {
   color: $White;
   line-height: 0;
@@ -33,4 +37,25 @@
 .value {
   color: $StrongCyan;
   font-size: 3rem;
+}
+
+.button {
+  width: 350px;
+  height: 50px;
+  border-radius: 0.4rem;
+  border-style: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: $DarkCyan;
+  background-color: $Cyan;
+  text-transform: uppercase;
+  margin: 6rem 0 0;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &.active {
+    background-color: $StrongCyan;
+  }
 }

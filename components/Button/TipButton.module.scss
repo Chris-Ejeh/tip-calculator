@@ -1,18 +1,21 @@
 @import '../../styles/fonts.scss';
 @import '../../styles/color.scss';
 
-.buttonContainer {
-  width: 520px;
-}
-
 .button {
   margin: 0.5rem;
   background-color: $VeryDarkCyan;
-  width: 150px;
   height: 50px;
   border-radius: 0.5rem;
   font-size: 1.5rem;
   font-family: $primary;
   font-weight: 700;
   color: white;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    transform: scale(1.1);
+    background-color: $StrongCyan;
+    border: 0;
+  }
 }
