@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 export const useForm = <T extends {}>(initial: T) => {
   const [inputs, setInputs] = useState<T>(initial);
+  const [error, setError] = useState(false);
   const initialValues = Object.values(initial).join('');
 
   useEffect(() => {
@@ -9,7 +10,7 @@ export const useForm = <T extends {}>(initial: T) => {
   }, [initialValues]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    let { name, value } = event.target;
+    let { name, value, type } = event.target;
 
     setInputs({
       ...inputs,
@@ -21,5 +22,5 @@ export const useForm = <T extends {}>(initial: T) => {
     setInputs(initial);
   };
 
-  return { handleChange, resetForm, inputs };
+  return { handleChange, resetForm, inputs, error };
 };

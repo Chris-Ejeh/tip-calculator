@@ -3,8 +3,11 @@ import TipButton from '../Button/TipButton';
 import DisplayCard from '../DisplayCard/DisplayCard';
 
 import { useForm } from '../utils/useForm';
+import { BiDollar } from 'react-icons/bi';
+import { BsFillPersonFill } from 'react-icons/bs';
 
 import styles from './Card.module.scss';
+import InputForm from '../InputForm/InputForm';
 
 const ButtonValues = ['5', '10', '15', '25', '50'];
 
@@ -21,6 +24,8 @@ export const Card: FC<CardProps> = ({ reset }) => {
   const [tip, setTip] = useState(0);
   const [amount, setAmount] = useState(0);
   const [total, setTotal] = useState(0);
+  const [error, setError] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const { inputs, handleChange, resetForm } = useForm<FormProps>({
     bill: 0,
     people: 0,
@@ -28,29 +33,30 @@ export const Card: FC<CardProps> = ({ reset }) => {
 
   const getTipPercentage = (num: number) => {
     setTip(num);
+    setIsActive(true);
   };
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    setAmount(((inputs.bill / inputs.people) * tip) / 100);
-    setTotal(inputs.bill / inputs.people);
+
+    inputs.people == 0
+      ? setError(true)
+      : (setError(false),
+        setAmount(((inputs.bill / inputs.people) * tip) / 100),
+        setTotal(inputs.bill / inputs.people));
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.inputCard}>
         <form className={styles.form} onSubmit={handleSubmit}>
-          <label htmlFor="bill">
-            Bill
-            <input
-              className={styles.inputField}
-              type="text"
-              name="bill"
-              placeholder="0"
-              value={inputs.bill}
-              onChange={handleChange}
-            />
-          </label>
+          <InputForm
+            title="bill"
+            label="Bill"
+            value={inputs.bill}
+            onChange={handleChange}
+            icon={<BiDollar className={styles.icon} />}
+          />
 
           <div className={styles.percentageButton}>
             <p className={styles.title}>Select Tip %</p>
@@ -62,23 +68,20 @@ export const Card: FC<CardProps> = ({ reset }) => {
                   onClick={() => getTipPercentage(parseFloat(num))}
                 />
               ))}
-              <button contentEditable={true} className={styles.button}>
+              <button contentEditable={'true'} className={styles.button}>
                 Custom
               </button>
             </div>
           </div>
 
-          <label htmlFor="people">
-            Number of People
-            <input
-              className={styles.inputField}
-              type="text"
-              name="people"
-              placeholder="0"
-              value={inputs.people}
-              onChange={handleChange}
-            />
-          </label>
+          <InputForm
+            title="people"
+            label="People"
+            value={inputs.people}
+            error={error}
+            onChange={handleChange}
+            icon={<BsFillPersonFill className={styles.icon} />}
+          />
         </form>
       </div>
 

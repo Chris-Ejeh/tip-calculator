@@ -1,9 +1,9 @@
-import { useState } from 'react';
 import { FC, MouseEventHandler } from 'react';
 import styles from './TipButton.module.scss';
 
 interface TipButtonProps {
   value: string;
+
   onClick: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 

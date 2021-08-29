@@ -1,4 +1,5 @@
 @import '../../styles/fonts.scss';
+@import '../../styles/color.scss';
 
 .mainContainer {
   background: hsl(185, 41%, 84%);
@@ -6,7 +7,9 @@
   flex-direction: column;
   align-items: center;
   font-family: $primary;
-  padding: 4rem 8rem;
+  padding: 5rem;
+  width: 100%;
+  height: 100%;
   position: relative;
 
   .containerHeading {
@@ -14,9 +17,7 @@
     font-weight: 700;
     letter-spacing: 0.7rem;
     margin-bottom: 2rem;
+    color: $Cyan;
+    width: 10%;
   }
-}
-
-.tipContainer {
-  background: hsl(0, 0%, 100%);
 }

@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/images/favicon.png" />
       </Head>
 
-      <MainCard heading="SPLITTER" reset="reset" />
+      <MainCard heading="SPLITTER" />
     </div>
   );
 }

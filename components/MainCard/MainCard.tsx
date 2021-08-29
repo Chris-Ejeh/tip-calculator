@@ -6,16 +6,14 @@ import { split } from '../utils/funcs';
 
 interface MainCardProps {
   heading: string;
-  reset: string;
 }
 
-const MainCard: FC<MainCardProps> = ({ heading, reset }) => {
+const MainCard: FC<MainCardProps> = ({ heading }) => {
   return (
     <div className={styles.mainContainer}>
       <h2 className={styles.containerHeading}>{split(heading, 4)}</h2>
-      <div className={styles.tipContainer}>
-        <Card reset={reset} />
-      </div>
+
+      <Card reset="reset" />
     </div>
   );
 };
