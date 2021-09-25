@@ -2,45 +2,45 @@
 @import '../../styles/color.scss';
 
 .form {
-  font-size: 1rem;
-  color: gray;
-  font-family: $primary;
-  padding: 0 0.5rem;
-  margin-bottom: 2rem;
+    font-size: 1rem;
+    color: gray;
+    font-family: $primary;
+    padding: 0 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .label {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.8rem;
-  font-family: $primary;
-  font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    font-family: $primary;
+    font-weight: 700;
 }
 
 .error {
-  color: $Error;
+    color: $Error;
 }
 
 .inputContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 0.2rem 1rem;
-  width: 100%;
-  background-color: $LightGrayishCyan;
-  border-radius: 0.5rem;
-  border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0.2rem 1rem;
+    background-color: $LightGrayishCyan;
+    border-radius: 0.5rem;
+    border-style: none;
 }
 
 .inputField {
-  border: none;
-  background-color: $LightGrayishCyan;
-  font-size: 1.5rem;
-  font-weight: 400;
-  font-family: $primary;
-  direction: rtl;
-  outline: none;
+    border: none;
+    background-color: $LightGrayishCyan;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: $primary;
+    direction: rtl;
+    outline: none;
+    width: 100%;
 }
