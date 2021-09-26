@@ -8,6 +8,7 @@ import { BsFillPersonFill } from 'react-icons/bs';
 
 import styles from './Card.module.scss';
 import InputForm from '../InputForm/InputForm';
+import { getNumberedInputs } from '../utils/funcs';
 
 const cn = require('classnames');
 
@@ -18,8 +19,8 @@ interface CardProps {
 }
 
 interface FormProps {
-    bill: number;
-    people: number;
+    bill: string;
+    people: string;
 }
 
 export const Card: FC<CardProps> = ({ reset }) => {
@@ -29,8 +30,8 @@ export const Card: FC<CardProps> = ({ reset }) => {
     const [error, setError] = useState(false);
     const [isActive, setIsActive] = useState(false);
     const { inputs, handleChange, resetForm } = useForm<FormProps>({
-        bill: 0,
-        people: 0,
+        bill: '',
+        people: '',
     });
 
     const getTipPercentage = (num: number) => {
@@ -41,11 +42,12 @@ export const Card: FC<CardProps> = ({ reset }) => {
     const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
         e.preventDefault();
 
-        inputs.people == 0
+        const people = getNumberedInputs(inputs.people);
+        const bill = getNumberedInputs(inputs.bill);
+
+        people == 0
             ? setError(true)
-            : (setError(false),
-              setAmount(((inputs.bill / inputs.people) * tip) / 100),
-              setTotal(inputs.bill / inputs.people));
+            : (setError(false), setAmount(((bill / people) * tip) / 100), setTotal(bill / people));
     };
 
     return (
