@@ -2,21 +2,20 @@
 @import '../../styles/color.scss';
 
 .button {
-  margin: 0.5rem;
-  background-color: $VeryDarkCyan;
-  height: 50px;
-  border-radius: 0.5rem;
-  font-size: 1.5rem;
-  font-family: $primary;
-  font-weight: 700;
-  color: white;
-  cursor: pointer;
+    background-color: $VeryDarkCyan;
+    margin: 0.5rem;
+    height: 50px;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-family: $primary;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
 
-  &:hover,
-  &.active {
-    transform: scale(1.1);
-    background-color: $StrongCyan;
-    color: $VeryDarkCyan;
-    border: 0;
-  }
+    &:hover,
+    &:active {
+        background-color: $StrongCyan;
+        color: $VeryDarkCyan;
+        border: 0;
+    }
 }

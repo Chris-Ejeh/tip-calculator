@@ -2,13 +2,13 @@ import { FC, FormEventHandler, useState } from 'react';
 import TipButton from '../Button/TipButton';
 import DisplayCard from '../DisplayCard/DisplayCard';
 
-import { useForm } from '../utils/useForm';
+import { useForm } from '../../utils/useForm';
 import { BiDollar } from 'react-icons/bi';
 import { BsFillPersonFill } from 'react-icons/bs';
 
 import styles from './Card.module.scss';
 import InputForm from '../InputForm/InputForm';
-import { getNumberedInputs } from '../utils/funcs';
+import { getNumberedInputs } from '../../utils/funcs';
 
 const cn = require('classnames');
 
@@ -38,6 +38,7 @@ export const Card: FC<CardProps> = ({ reset }) => {
         setTip(num);
         setIsActive(true);
     };
+    console.log(tip);
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
         e.preventDefault();
@@ -45,8 +46,8 @@ export const Card: FC<CardProps> = ({ reset }) => {
         const people = getNumberedInputs(inputs.people);
         const bill = getNumberedInputs(inputs.bill);
 
-        people == 0
-            ? setError(true)
+        !inputs?.people
+            ? (setError(true), setIsActive(false))
             : (setError(false), setAmount(((bill / people) * tip) / 100), setTotal(bill / people));
     };
 
@@ -66,13 +67,16 @@ export const Card: FC<CardProps> = ({ reset }) => {
                         <div className={styles.percentageButton}>
                             <p className={styles.title}>Select Tip %</p>
                             <div className={styles.buttonContainer}>
-                                {ButtonValues.map((num, index) => (
-                                    <TipButton
-                                        key={index}
-                                        value={num}
-                                        onClick={() => getTipPercentage(parseFloat(num))}
-                                    />
-                                ))}
+                                {ButtonValues.map((num, index) => {
+                                    console.log(index);
+                                    return (
+                                        <TipButton
+                                            key={index}
+                                            value={num}
+                                            onClick={() => getTipPercentage(parseFloat(num))}
+                                        />
+                                    );
+                                })}
                                 <button contentEditable={'true'} className={styles.button}>
                                     Custom
                                 </button>
@@ -96,6 +100,7 @@ export const Card: FC<CardProps> = ({ reset }) => {
                         total={total}
                         onClick={() => {
                             resetForm();
+                            setIsActive(false);
                             setAmount(0);
                             setTotal(0);
                         }}

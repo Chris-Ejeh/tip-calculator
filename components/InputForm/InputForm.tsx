@@ -15,7 +15,7 @@ const InputForm: FC<FormProps> = ({ title, icon, label, error, value, onChange }
         <>
             <label htmlFor={title} className={styles.label}>
                 {label}
-                {error && <p className={styles.error}>Can't be Zero</p>}
+                {error ? <p className={styles.error}>Can't be Zero</p> : null}
             </label>
             <div className={styles.inputContainer}>
                 {icon}
