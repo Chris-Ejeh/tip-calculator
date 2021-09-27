@@ -75,7 +75,7 @@ export const Card: FC<CardProps> = ({ reset }) => {
                                         />
                                     );
                                 })}
-                                <button contentEditable={'true'} className={styles.button}>
+                                <button type="button" contentEditable={'true'} className={styles.button}>
                                     Custom
                                 </button>
                             </div>

@@ -13,7 +13,7 @@ interface FormProps {
 const InputForm: FC<FormProps> = ({ title, icon, label, error, value, onChange }) => {
     return (
         <>
-            <label htmlFor={title} className={styles.label}>
+            <label htmlFor={title} role="form" className={styles.label}>
                 {label}
                 {error ? <p className={styles.error}>Can't be Zero</p> : null}
             </label>
@@ -23,6 +23,7 @@ const InputForm: FC<FormProps> = ({ title, icon, label, error, value, onChange }
                     className={styles.inputField}
                     id={title}
                     type="text"
+                    role="form"
                     name={title}
                     placeholder="0"
                     value={value}

@@ -42,6 +42,7 @@ const DisplayCard: FC<DisplayCardProps> = ({ reset, tipAmount, total, onClick })
 
             <button
                 onClick={onClick}
+                type="reset"
                 className={cn(styles.button, {
                     [styles.active]: tipAmount > 0,
                 })}>
