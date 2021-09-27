@@ -6,7 +6,7 @@ interface FormProps {
     icon: JSX.Element;
     label: string | number | readonly string[] | undefined;
     error?: boolean;
-    value: string | number | readonly string[] | undefined;
+    value: string | undefined;
     onChange: ChangeEventHandler<HTMLInputElement> | undefined;
 }
 
@@ -21,6 +21,7 @@ const InputForm: FC<FormProps> = ({ title, icon, label, error, value, onChange }
                 {icon}
                 <input
                     className={styles.inputField}
+                    id={title}
                     type="text"
                     name={title}
                     placeholder="0"

@@ -1,4 +1,3 @@
-@import '../../styles/fonts.scss';
 @import '../../styles/color.scss';
 @import '../../styles/mixin.scss';
 
@@ -6,7 +5,6 @@
     padding: 0 2.5rem;
     background-color: $VeryDarkCyan;
     border-radius: 1rem;
-    font-family: $primary;
 }
 
 .infoContainer {

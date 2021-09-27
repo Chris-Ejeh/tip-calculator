@@ -3,9 +3,11 @@
 
 @font-face {
     font-family: 'Space Mono';
-    font-weight: 400;
     src: url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap') format('woff2'),
         url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
 }
 
 html,
@@ -14,6 +16,8 @@ body {
     margin: 0;
     line-height: 1.6;
     background-color: $GrayCyan;
+    font-family: 'Space Mono';
+    font-weight: bold;
     color: grey;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -45,7 +49,7 @@ a {
 
     @include respond-to('small') {
         width: map-get($containerWidth, 'small');
-        // padding: 0;
+        padding: 0;
     }
 
     @include respond-to('medium') {

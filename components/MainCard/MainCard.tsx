@@ -14,7 +14,7 @@ const MainCard: FC<MainCardProps> = ({ heading }) => {
     return (
         <div className={styles.mainContainer}>
             <Head title="Tip Calculator" />
-            <h2 className={styles.containerHeading}>{split(heading, 4)}</h2>
+            <h1 className={styles.containerHeading}>{split(heading, 4)}</h1>
             <Card reset="reset" />
         </div>
     );

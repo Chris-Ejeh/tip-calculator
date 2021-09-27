@@ -9,8 +9,9 @@ const Head: FC<HeadProps> = ({ title }) => {
     return (
         <NextHead>
             <title>{title}</title>
-            <meta name="description" content="Coding Challenge" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" />
             <link rel="icon" href="/images/favicon.png" />
+            <meta name="description" content="Coding Challenge" />
         </NextHead>
     );
 };

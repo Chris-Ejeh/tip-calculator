@@ -14,28 +14,28 @@ const DisplayCard: FC<DisplayCardProps> = ({ reset, tipAmount, total, onClick })
         <div className={styles.container}>
             <div className={styles.infoContainer}>
                 <div className={styles.text}>
-                    <h4 className={styles.title}>Tip Amount</h4>
+                    <h2 className={styles.title}>Tip Amount</h2>
                     <p className={styles.subTitle}>/ person</p>
                 </div>
                 <div className={styles.number}>
                     {!tipAmount ? (
-                        <h1 className={styles.value}>$0.00</h1>
+                        <p className={styles.value}>$0.00</p>
                     ) : (
-                        <h1 className={styles.value}>${tipAmount.toPrecision(3)}</h1>
+                        <p className={styles.value}>${tipAmount.toPrecision(3)}</p>
                     )}
                 </div>
             </div>
 
             <div className={styles.infoContainer}>
                 <div className={styles.text}>
-                    <h4 className={styles.title}>Total</h4>
+                    <h2 className={styles.title}>Total</h2>
                     <p className={styles.subTitle}>/ person</p>
                 </div>
                 <div className={styles.number}>
                     {!total ? (
-                        <h1 className={styles.value}>$0.00</h1>
+                        <p className={styles.value}>$0.00</p>
                     ) : (
-                        <h1 className={styles.value}>${total.toPrecision(3)}</h1>
+                        <p className={styles.value}>${total.toPrecision(3)}</p>
                     )}
                 </div>
             </div>
