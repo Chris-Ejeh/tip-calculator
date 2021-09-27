@@ -38,7 +38,6 @@ export const Card: FC<CardProps> = ({ reset }) => {
         setTip(num);
         setIsActive(true);
     };
-    console.log(tip);
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
         e.preventDefault();
