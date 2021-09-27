@@ -54,7 +54,7 @@ export const Card: FC<CardProps> = ({ reset }) => {
         <div className={styles.wrapper}>
             <div className={cn('container', styles.container)}>
                 <div className={styles.inputCard}>
-                    <form className={styles.form} onSubmit={handleSubmit}>
+                    <form id="form" aria-label="Add a number" className={styles.form} onSubmit={handleSubmit}>
                         <InputForm
                             title="bill"
                             label="Bill"
