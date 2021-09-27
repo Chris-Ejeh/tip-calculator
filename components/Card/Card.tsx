@@ -67,7 +67,6 @@ export const Card: FC<CardProps> = ({ reset }) => {
                             <p className={styles.title}>Select Tip %</p>
                             <div className={styles.buttonContainer}>
                                 {ButtonValues.map((num, index) => {
-                                    console.log(index);
                                     return (
                                         <TipButton
                                             key={index}
