@@ -1,15 +1,15 @@
 import { FC, MouseEventHandler } from 'react';
-import styles from './DisplayCard.module.scss';
+import styles from './ResultCard.module.scss';
 const cn = require('classnames');
 
-interface DisplayCardProps {
+interface ResultCardProps {
     reset: string;
     tipAmount: number;
     total: number;
     onClick: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
-const DisplayCard: FC<DisplayCardProps> = ({ reset, tipAmount, total, onClick }) => {
+const ResultCard: FC<ResultCardProps> = ({ reset, tipAmount, total, onClick }) => {
     return (
         <div className={styles.container}>
             <div className={styles.infoContainer}>
@@ -51,4 +51,4 @@ const DisplayCard: FC<DisplayCardProps> = ({ reset, tipAmount, total, onClick })
         </div>
     );
 };
-export default DisplayCard;
+export default ResultCard;
