@@ -4,17 +4,17 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ## Table of contents
 
--   [Overview](#overview)
-    -   [The challenge](#the-challenge)
-    -   [Screenshot](#screenshot)
-    -   [Links](#links)
--   [My process](#my-process)
-    -   [Built with](#built-with)
-    -   [What I learned](#what-i-learned)
-    -   [Continued development](#continued-development)
-    -   [Useful resources](#useful-resources)
--   [Author](#author)
--   [Acknowledgments](#acknowledgments)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -22,9 +22,9 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 Users should be able to:
 
--   View the optimal layout for the app depending on their device's screen size
--   See hover states for all interactive elements on the page
--   Calculate the correct tip and total cost of the bill per person
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Calculate the correct tip and total cost of the bill per person
 
 ### Screenshot
 
@@ -33,17 +33,17 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
 ### Built with
 
--   [React](https://reactjs.org/) - JS library
--   [Next.js](https://nextjs.org/) - React framework
--   [Sass](https://sass-lang.com/) - For styles
--   Integrated mobile first design principle
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Sass](https://sass-lang.com/) - For styles
+- Integrated mobile first design principle
 
 ### Continued development
 
@@ -51,7 +51,7 @@ Looking forward to taking on higer level challenges. This challenge has improved
 
 ## Author
 
--   LinkedIn - [Oritseweyinmi Chris Ejeh](www.linkedin.com/in/chris-ejeh)
+- LinkedIn - [Oritseweyinmi Chris Ejeh](www.linkedin.com/in/chris-ejeh)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

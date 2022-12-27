@@ -1,19 +1,21 @@
-import { useState } from 'react';
-import _ from 'underscore';
+import { useState } from "react";
+import _ from "underscore";
 
 export const split = (str: string, n: number) => {
-    let numberOfSegments = Math.ceil(_.size(str) / n);
-    let segments = _.map(_.range(numberOfSegments), (segmentIndex) => str.substr(segmentIndex * n, n));
-    return segments.join('\n');
+  let numberOfSegments = Math.ceil(_.size(str) / n);
+  let segments = _.map(_.range(numberOfSegments), (segmentIndex) =>
+    str.substr(segmentIndex * n, n)
+  );
+  return segments.join("\n");
 };
 
 export const result = (state: number) => {
-    const [input, setInput] = useState(0);
+  const [input, setInput] = useState(0);
 
-    setInput(state);
+  setInput(state);
 };
 
 export const getNumberedInputs = (input: string) => {
-    const numberedInput = parseFloat(input);
-    return numberedInput;
+  const numberedInput = parseFloat(input);
+  return numberedInput;
 };

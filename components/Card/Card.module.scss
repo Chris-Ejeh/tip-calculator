@@ -1,59 +1,74 @@
-@import '../../styles/color.scss';
-@import '../../styles/mixin.scss';
+@import "../../styles/color.scss";
+@import "../../styles/mixin.scss";
 
 .wrapper {
-    background: hsl(0, 0%, 100%);
-    border-radius: 1rem;
-    box-shadow: 0 8px 15px $Cyan;
+  background: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  box-shadow: 0 8px 15px $Cyan;
+
+
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    @include respond-to('small') {
-        flex-direction: row;
-    }
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  @include respond-to("small") {
+    flex-direction: row;
+  }
 }
 
 .inputCard {
-    margin: auto;
-    width: 100%;
-    margin-right: 2rem;
+  margin: auto;
+  width: 100%;
+  margin-right: 2rem;
 }
-.displayCard {
-    width: 100%;
-    margin-top: 2rem;
-    @include respond-to('small') {
-        margin: auto;
-    }
+
+.resultCard {
+  width: 100%;
+  margin-top: 2rem;
+  @include respond-to("small") {
+    margin: auto;
+  }
 }
 
 .percentageButton {
-    margin: 2rem 0;
+  margin: 2rem 0;
 }
 
 .buttonContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
 
-    @include respond-to('medium') {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+  .buttonActive {
+    background-color: $StrongCyan;
+    color: $VeryDarkCyan;
+    border: 0;
+  }
+
+  // .customInput {
+  //   width: 90%;
+  // }
+
+  @include respond-to("medium") {
+    grid-template-columns: 1fr 1fr 1fr;
+   
+  }
 }
 
 .button {
-    margin: 0.5rem;
-    background-color: $LightGrayishCyan;
-    height: 50px;
-    border-radius: 0.5rem;
-    border: none;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: $Cyan;
-    cursor: pointer;
+  margin: 0.5rem;
+  background-color: $LightGrayishCyan;
+  height: 50px;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $Cyan;
+  cursor: pointer;
 
-    &:hover {
-        transform: scale(1.1);
-    }
+  &:hover {
+    transform: scale(1.1);
+  }
 }
+

@@ -1,31 +1,31 @@
 $breakpoints: (
-    'phone': 375px,
-    'phonePlus': 420px,
-    'small': 767px,
-    'medium': 992px,
-    'medium-large': 1024px,
-    'large': 1200px,
+  "phone": 375px,
+  "phonePlus": 420px,
+  "small": 767px,
+  "medium": 992px,
+  "medium-large": 1024px,
+  "large": 1200px,
 ) !default;
 
 $containerWidth: (
-    'small': 730px,
-    'medium': 930px,
-    'medium-large': 988px,
-    'large': 1170px,
+  "small": 730px,
+  "medium": 930px,
+  "medium-large": 988px,
+  "large": 1170px,
 );
 
 @mixin respond-to($breakpoint) {
-    // If the key exists in the map
-    @if map-has-key($breakpoints, $breakpoint) {
-        // Prints a media query based on the value
-        @media (min-width: map-get($breakpoints, $breakpoint )) {
-            @content;
-        }
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint )) {
+      @content;
     }
+  }
 
-    // If the key doesn't exist in the map
-    @else {
-        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
-    }
+  }
 }
