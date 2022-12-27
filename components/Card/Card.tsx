@@ -1,6 +1,6 @@
 import { FC, FormEventHandler, useState } from 'react';
 import TipButton from '../Button/TipButton';
-import DisplayCard from '../DisplayCard/DisplayCard';
+import ResultCard from '../ResultCard/ResultCard';
 
 import { useForm } from '../../utils/useForm';
 import { BiDollar } from 'react-icons/bi';
@@ -92,7 +92,7 @@ export const Card: FC<CardProps> = ({ reset }) => {
                     </form>
                 </div>
                 <div className={styles.displayCard}>
-                    <DisplayCard
+                    <ResultCard
                         reset={reset}
                         tipAmount={amount}
                         total={total}
