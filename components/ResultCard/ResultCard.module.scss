@@ -1,74 +1,74 @@
-@import '../../styles/color.scss';
-@import '../../styles/mixin.scss';
+@import "../../styles/color.scss";
+@import "../../styles/mixin.scss";
 
 .container {
-    padding: 0 2.5rem;
-    background-color: $VeryDarkCyan;
-    border-radius: 1rem;
+  padding: 0 2.5rem;
+  background-color: $VeryDarkCyan;
+  border-radius: 1rem;
 }
 
 .infoContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-    + .infoContainer {
-        margin: auto;
-        @include respond-to('medium') {
-            margin-top: -3rem;
-        }
+  + .infoContainer {
+    margin: auto;
+    @include respond-to("medium") {
+      margin-top: -3rem;
     }
+  }
 }
 
 .title {
-    color: $White;
-    font-size: 0.8rem;
-    line-height: 0;
+  color: $White;
+  font-size: 0.8rem;
+  line-height: 0;
 
-    @include respond-to('medium') {
-        font-size: 1rem;
-    }
+  @include respond-to("medium") {
+    font-size: 1rem;
+  }
 }
 
 .subTitle {
-    color: $DarkCyan;
-    font-size: 0.8rem;
-    font-weight: 700;
-    line-height: 0;
+  color: $DarkCyan;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 0;
 }
 
 .value {
-    color: $StrongCyan;
-    font-size: 2rem;
+  color: $StrongCyan;
+  font-size: 2rem;
 
-    @include respond-to('small') {
-        font-size: 3rem;
-    }
+  @include respond-to("small") {
+    font-size: 3rem;
+  }
 }
 
 .button {
-    width: 100%;
-    height: 50px;
-    border-radius: 0.4rem;
-    border-style: none;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: $DarkCyan;
-    background-color: $Cyan;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
+  width: 100%;
+  height: 50px;
+  border-radius: 0.4rem;
+  border-style: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: $DarkCyan;
+  background-color: $Cyan;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
 
-    @include respond-to('small') {
-        margin: 3rem 0;
-    }
+  @include respond-to("small") {
+    margin: 3rem 0;
+  }
 
-    &:hover {
-        transform: scale(1.1);
-    }
+  &:hover {
+    transform: scale(1.1);
+  }
 
-    &.active {
-        background-color: $StrongCyan;
-        color: $VeryDarkCyan;
-    }
+  &.active {
+    background-color: $StrongCyan;
+    color: $VeryDarkCyan;
+  }
 }

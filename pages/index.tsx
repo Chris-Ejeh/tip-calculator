@@ -1,3 +1,3 @@
-import page from './tipCalculator';
+import page from "./tipCalculator";
 
 export default page;

@@ -1,18 +1,18 @@
-@import '../../styles/color.scss';
-@import '../../styles/mixin.scss';
+@import "../../styles/color.scss";
+@import "../../styles/mixin.scss";
 
 .mainContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .containerHeading {
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 0.7rem;
-    margin-bottom: 2rem;
-    color: $Cyan;
-    width: 10%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.7rem;
+  margin-bottom: 2rem;
+  color: $Cyan;
+  width: 10%;
 }
